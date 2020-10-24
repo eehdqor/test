@@ -1,0 +1,135 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=3.0, maximum-scale=3.0, minimum-scale=3.0. user-scalable=no," />
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<body style="color: #000000; margin-left: 1px; margin-right: 5px; margin-top: 1px; margin-bottom: 5px; background-color: #FFFFFF"; background-image: url('');"> 
+
+<script language='javascript'> 
+function searchText() { 
+
+    var upquery =  document.getElementById('searchText').value; 
+    var dimSite = document.getElementById('site').options[document.getElementById('site').selectedIndex].value; 
+
+    queryUrl = new Array(18); 
+
+    queryUrl[3] = new Array("search.naver.com/search.naver?where=nexearch&query=",1); 
+
+    queryUrl[4] = new Array("search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&q=",2); 
+
+    queryUrl[7] = new Array("www.google.co.kr/search?hl=ko&q=",1); 
+
+    queryUrl[10] = new Array("dic.naver.com/search.nhn?target=dic&query=",2); 
+
+    queryUrl[12] = new Array("news.search.naver.com/search.naver?ie=utf8&se=0&mobile=0&tx=&where=news&query=",2); 
+
+    siteName = new Array(18); 
+    siteName[3] = "4"; 
+    siteName[4] = "5"; 
+    siteName[7] = "8"; 
+    siteName[10] = "11"; 
+    siteName[12] = "13"; 
+
+    for(var i=0; i < 18; i++) { 
+            
+            if(siteName[i] == dimSite) { 
+
+                    if(document.getElementById('winopen').checked) { 
+
+                            var dimQuery = (queryUrl[i][1] == 1) ? encodeURIComponent(upquery) : upquery; 
+
+                            var newWin = window.open('http://' + queryUrl[i][0] + dimQuery ,'_blank'); 
+                            break; 
+                    
+                    } else { 
+
+                            var dimQuery = (queryUrl[i][1] == 1) ? encodeURIComponent(upquery) : upquery; 
+
+                            location.href = 'http://' + queryUrl[i][0] + dimQuery; 
+                            break; 
+                            
+                    } 
+
+            } 
+
+    } 
+
+} 
+</script> 
+
+
+<table width="100" height="40" border="3" align="left" bordercolordark="#669900" cellspacing="0" bordercolorlight="#B0D72B" bordercolor="#9EBD22">
+  <tr>
+    <td align="center" valign="middle"><div align="left">
+      <select name="site" id='site'>
+        <option value="4" selected>Naver</option> 
+        <option value="5">Daum</option>
+        <option value="8">Google</option>
+        <option value="11">통합사전</option> 
+        <option value="13">뉴스</option>
+      </select>
+      
+    <input type='button' value='    검색    ' onclick='searchText();'>
+    
+    <br>
+    
+      <input type='checkbox' id='winopen' checked><font size=1>새창</font>
+      <input type='text' size=28' id='searchText' onkeypress="if(escape(event.keyCode) == 13) { searchText(); }">                    
+  </div></td>
+  </tr>
+</table> 
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<font size=2 color=gray>
+<a href="http://www.naver.com/?mobile" target="_blank">Naver</a>
+<br><br>
+<a href="http://www.daum.net/?nil_top=mobile" target="_blank">Daum</a>
+<br><br>
+<a href="http://www.google.co.kr/?nomo=1&hl=ko" target="_blank">Google</a>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+</font>
+
+<font size=1>  
+<a href="mailto:﻿eehdqor@outlook.com">eehdqor@outlook.com</a>
+
+<br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
