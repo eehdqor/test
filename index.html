@@ -1,0 +1,221 @@
+<html>
+<head>
+
+<title>다중검색</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=3.0, maximum-scale=3.0, minimum-scale=3.0. user-scalable=no," />
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+</head>
+
+<body style="color: #000000; margin-left: 1px; margin-right: 5px; margin-top: 1px; margin-bottom: 5px; background-color: #FFFFFF"; background-image: url('');"> 
+
+<script language='javascript'> 
+function searchText() { 
+
+    var upquery =  document.getElementById('searchText').value; 
+    var dimSite = document.getElementById('site').options[document.getElementById('site').selectedIndex].value; 
+
+    queryUrl = new Array(18); 
+
+    queryUrl[3] = new Array("search.naver.com/search.naver?where=nexearch&query=",1); 
+
+    queryUrl[4] = new Array("search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&q=",2); 
+
+    queryUrl[7] = new Array("www.google.co.kr/search?hl=ko&q=",1); 
+
+    queryUrl[10] = new Array("dic.naver.com/search.nhn?target=dic&query=",2); 
+
+    queryUrl[12] = new Array("www.youtube.com/results?search_query=",1); 
+
+    queryUrl[13] = new Array("www.daangn.com/search/",2); 
+
+    queryUrl[14] = new Array("search.danawa.com/mobile/dsearch.php?keyword=",1); 
+
+    queryUrl[15] = new Array("m.coupang.com/nm/search?q=",1); 
+
+    queryUrl[16] = new Array("browse.auction.co.kr/search?keyword=",1); 
+
+    queryUrl[17] = new Array("search.shopping.naver.com/search/all?query=",1); 
+
+    siteName = new Array(18); 
+    siteName[3] = "4"; 
+    siteName[4] = "5"; 
+    siteName[7] = "8"; 
+    siteName[10] = "11"; 
+    siteName[12] = "13"; 
+    siteName[13] = "14"; 
+    siteName[14] = "15"; 
+    siteName[15] = "16"; 
+    siteName[16] = "17"; 
+    siteName[17] = "18"; 
+
+    for(var i=0; i < 18; i++) { 
+            
+            if(siteName[i] == dimSite) { 
+
+                    if(document.getElementById('winopen').checked) { 
+
+                            var dimQuery = (queryUrl[i][1] == 1) ? encodeURIComponent(upquery) : upquery; 
+
+                            var newWin = window.open('http://' + queryUrl[i][0] + dimQuery ,'_blank'); 
+                            break; 
+                    
+                    } else { 
+
+                            var dimQuery = (queryUrl[i][1] == 1) ? encodeURIComponent(upquery) : upquery; 
+
+                            location.href = 'http://' + queryUrl[i][0] + dimQuery; 
+                            break; 
+                            
+                    } 
+
+            } 
+
+    } 
+
+} 
+</script> 
+
+
+<table width="100" height="40" border="3" align="left" bordercolordark="#669900" cellspacing="0" bordercolorlight="#B0D72B" bordercolor="#9EBD22">
+  <tr>
+    <td align="center" valign="middle"><div align="left">
+      <select name="site" id='site'>
+        <option value="4" selected>Naver</option> 
+        <option value="5">Daum</option>
+        <option value="8">Google</option>
+        <option value="11">어학사전</option> 
+        <option value="13">유튜브</option>
+        <option value="14">당근마켓</option>
+        <option value="15">다나와</option>
+        <option value="16">쿠팡</option>
+        <option value="17">옥션</option>
+        <option value="18">N쇼핑</option>
+
+      </select>
+      
+    <input type='button' value='    검색    ' onclick='searchText();'>
+    
+    <br>
+    
+      <input type='checkbox' id='winopen' checked><font size=1>새창</font>
+      <input type='text' size=28' id='searchText' onkeypress="if(escape(event.keyCode) == 13) { searchText(); }">                    
+  </div></td>
+  </tr>
+</table> 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div style="padding-left: 3px">
+
+<br>
+
+<font size=2 color=gray>
+<a href="http://www.naver.com/?mobile" target="_blank">Naver</a>
+<br><br>
+<a href="http://www.daum.net/?nil_top=mobile" target="_blank">Daum</a>
+<br><br>
+<a href="http://www.google.co.kr/?nomo=1&hl=ko" target="_blank">Google</a>
+
+</div>       
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+</font>
+
+
+<div style="padding-left: 3px">
+
+<br>
+
+<font size=1>  
+
+▣ 안드로이드 추천앱 10선
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.alphainventor.filemanager" target="_blank">파일 관리자 +</a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.tss21.input.korean" target="_blank">TS 한글 키보드</a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.socialnmobile.dictapps.notepad.color.note" target="_blank">컬러노트</a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.whowhoncompany.lab.notistory" target="_blank">notistory</a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.peace.TextScanner" target="_blank">텍스트 스케너</a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.infraware.office.link" target="_blank">Polaris Office</a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.opera.browser" target="_blank">Opera 브라우저 </a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=de.ub0r.android.choosebrowser" target="_blank">Choose browser</a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.studio360apps.magnifier" target="_blank">돋보기</a>
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=in.binarybox.blackscreen" target="_blank">블랙스크린</a>
+
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+
+<!-- FC2 카운터 여기부터 -->
+방문자수:<script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=37123099&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=37123099&main=1" /></noscript>
+<!-- My 카운터 여기까지 -->
+
+
+<!-- FC2 카운터 여기부터 -->
+현재 접속자수:<script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=37123099&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=37123099&main=1" /></noscript>
+<!-- My 카운터 여기까지 -->
+
+
+
+
+<br><br>
+
+
+<a href="mailto:﻿eehdqor@outlook.com">eehdqor@outlook.com</a>
+
+</div>       
+
+<br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
